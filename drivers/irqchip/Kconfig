@@ -69,3 +69,9 @@ config VERSATILE_FPGA_IRQ_NR
 config XTENSA_MX
 	bool
 	select IRQ_DOMAIN
+
+config XILINX_AXI_INTC
+	bool
+	depends on IRQCHIP
+	help
+		Support for Xilinx AXI Interrupt Controller

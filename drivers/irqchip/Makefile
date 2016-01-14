@@ -26,3 +26,7 @@ obj-$(CONFIG_ARCH_VT8500)		+= irq-vt8500.o
 obj-$(CONFIG_TB10X_IRQC)		+= irq-tb10x.o
 obj-$(CONFIG_XTENSA)			+= irq-xtensa-pic.o
 obj-$(CONFIG_XTENSA_MX)			+= irq-xtensa-mx.o
+ifdef CONFIG_FUNCTION_TRACER
+CFLAGS_REMOVE_irq-xilinx-axi-intc.o = -pg
+endif
+obj-$(CONFIG_XILINX_AXI_INTC)           += irq-xilinx-axi-intc.o

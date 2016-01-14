@@ -35,6 +35,7 @@ config MICROBLAZE
 	select COMMON_CLK
 	select BUILDTIME_EXTABLE_SORT
 	select GENERIC_SCHED_CLOCK
+	select XILINX_AXI_INTC
 
 config SWAP
 	def_bool n

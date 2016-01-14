@@ -15,7 +15,7 @@
 #include <linux/io.h>
 #include <linux/bug.h>
 
-#include "../../drivers/irqchip/irqchip.h"
+#include "irqchip.h"
 
 static void __iomem *intc_baseaddr;
 
