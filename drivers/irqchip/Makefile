@@ -44,3 +44,7 @@ obj-$(CONFIG_KEYSTONE_IRQ)		+= irq-keystone.o
 obj-$(CONFIG_MIPS_GIC)			+= irq-mips-gic.o
 obj-$(CONFIG_ARCH_MEDIATEK)		+= irq-mtk-sysirq.o
 obj-$(CONFIG_ARCH_DIGICOLOR)		+= irq-digicolor.o
+ifdef CONFIG_FUNCTION_TRACER
+CFLAGS_REMOVE_irq-xilinx-axi-intc.o = -pg
+endif
+obj-$(CONFIG_XILINX_AXI_INTC)           += irq-xilinx-axi-intc.o

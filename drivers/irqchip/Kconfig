@@ -155,3 +155,9 @@ config KEYSTONE_IRQ
 config MIPS_GIC
 	bool
 	select MIPS_CM
+
+config XILINX_AXI_INTC
+	bool
+	depends on IRQCHIP
+	help
+		Support for Xilinx AXI Interrupt Controller

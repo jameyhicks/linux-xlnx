@@ -33,6 +33,7 @@ config MICROBLAZE
 	select OF_EARLY_FLATTREE
 	select TRACING_SUPPORT
 	select VIRT_TO_BUS
+	select XILINX_AXI_INTC
 
 config SWAP
 	def_bool n
